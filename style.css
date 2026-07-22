@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #050505, #101a35);
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container {
+    width: 95%;
+    max-width: 500px;
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 35px;
+}
+
+
+.robot {
+    margin: 20px auto;
+}
+
+
+.head {
+    width: 230px;
+    height: 200px;
+    background: #1e90ff;
+    border-radius: 40px;
+    margin: auto;
+    position: relative;
+    box-shadow: 0 0 30px #1e90ff;
+}
+
+
+.eyes {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 55px;
+}
+
+
+.eyes span {
+    width: 35px;
+    height: 35px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 15px white;
+}
+
+
+#mouth {
+    width: 90px;
+    height: 20px;
+    background: black;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 40px;
+    left: 70px;
+}
+
+
+.body {
+    width: 170px;
+    height: 130px;
+    background: #333;
+    margin: 10px auto;
+    border-radius: 25px;
+    box-shadow: 0 0 20px #555;
+}
+
+
+#chat {
+    background: rgba(255,255,255,0.1);
+    padding: 15px;
+    border-radius: 15px;
+    height: 120px;
+    overflow-y: auto;
+}
+
+
+.controls button,
+.inputbox button {
+    padding: 12px;
+    margin: 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+.inputbox {
+    display: flex;
+    gap: 5px;
+}
+
+
+input {
+    flex: 1;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+}
+
+
+button {
+    background: #1e90ff;
+    color: white;
+}
+
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+.talking {
+    animation: talk 0.2s infinite alternate;
+}
+
+
+@keyframes talk {
+
+from {
+    height: 15px;
+}
+
+to {
+    height: 40px;
+}
+
+}
