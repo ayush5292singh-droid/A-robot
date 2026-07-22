@@ -1,3 +1,11 @@
+let language = "en-US";
+
+
+function changeLanguage(){
+
+    language = document.getElementById("language").value;
+
+}
 let mode = "question";
 
 
@@ -195,7 +203,7 @@ function speak(text){
 
     let speech = new SpeechSynthesisUtterance(text);
 
-    speech.lang = "en-US";
+    speech.lang = language;
 
     
     let mouth = document.getElementById("mouth");
