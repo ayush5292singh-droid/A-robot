@@ -151,7 +151,60 @@ if(question.includes("thank")){
 
 }
 
+if(question.includes("what can you do")){
 
+    return "I can chat with you, repeat your words, answer questions, and speak different languages.";
+
+}
+
+
+if(question.includes("who are you")){
+
+    return "I am Robo AI, your virtual robot assistant.";
+
+}
+
+
+if(question.includes("good morning")){
+
+    return "Good morning! I hope you have a great day.";
+
+}
+
+
+if(question.includes("good night")){
+
+    return "Good night! Have a nice sleep.";
+
+}
+
+
+if(question.includes("weather")){
+
+    return "I cannot check live weather yet, but you can add a weather feature later.";
+
+}
+
+
+if(question.includes("earth")){
+
+    return "Earth is the third planet from the Sun and the only known planet with life.";
+
+}
+
+
+if(question.includes("sun")){
+
+    return "The Sun is a star at the centre of our solar system.";
+
+}
+
+
+if(question.includes("moon")){
+
+    return "The Moon is Earth's natural satellite.";
+
+}
 return "I am learning more answers. Try asking another question.";
 
 
