@@ -63,7 +63,22 @@ h1 {
     bottom: 40px;
     left: 70px;
 }
+.talking {
+    animation: talk 0.18s infinite alternate;
+}
 
+
+@keyframes talk {
+
+    from {
+        height: 15px;
+    }
+
+    to {
+        height: 45px;
+    }
+
+}
 
 .body {
     width: 170px;
