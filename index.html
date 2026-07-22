@@ -1,23 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Smart Bot AI</title>
+<title>Robo AI</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="chatbox">
+<div class="container">
 
-<h1>🤖 Smart Bot AI</h1>
+<h1>🤖 Robo AI</h1>
 
-<div id="chat">
-<p class="bot">Bot: Hello! Ask me anything.</p>
+<div class="robot">
+
+<div class="head">
+<div class="eyes">
+<span></span>
+<span></span>
 </div>
 
-<input id="input" placeholder="Type your message...">
+<div id="mouth"></div>
 
-<button onclick="send()">Send</button>
+</div>
+
+<div class="body">
+</div>
+
+</div>
+
+
+<div id="chat">
+<p>Robot: Hello! I am Robo AI.</p>
+</div>
+
+
+<div class="controls">
+
+<button onclick="setMode('repeat')">
+🔁 Repeat Mode
+</button>
+
+<button onclick="setMode('question')">
+🧠 Question Mode
+</button>
+
+</div>
+
+
+<div class="inputbox">
+
+<input id="text" placeholder="Type message...">
+
+<button onclick="sendMessage()">
+Send
+</button>
+
+<button onclick="startVoice()">
+🎤
+</button>
+
+</div>
+
 
 </div>
 
