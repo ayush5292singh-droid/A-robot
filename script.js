@@ -93,7 +93,59 @@ function answerQuestion(question){
     }
 
 
-    return "Sorry, I am still learning this question.";
+    return
+    
+if(question.includes("date")){
+
+    return "Today is " + new Date().toDateString();
+
+}
+
+
+if(question.includes("who made you")){
+
+    return "I was created as a Robo AI project.";
+
+}
+
+
+if(question.includes("joke")){
+
+    return "Why did the computer go to the doctor? Because it had a virus.";
+
+}
+
+
+if(question.includes("capital of india")){
+
+    return "The capital of India is New Delhi.";
+
+}
+
+
+if(question.includes("largest planet")){
+
+    return "Jupiter is the largest planet in our solar system.";
+
+}
+
+
+if(question.includes("2 plus 2")){
+
+    return "2 plus 2 is 4.";
+
+}
+
+
+if(question.includes("thank")){
+
+    return "You are welcome.";
+
+}
+
+
+return "I am learning more answers. Try asking another question.";
+
 
 }
 
@@ -110,5 +162,54 @@ function addMessage(message){
     chat.appendChild(p);
 
     chat.scrollTop = chat.scrollHeight;
+
+}
+// Voice input
+
+function startVoice(){
+
+    let recognition = new webkitSpeechRecognition();
+
+    recognition.lang = "en-US";
+
+    recognition.start();
+
+
+    recognition.onresult = function(event){
+
+        let voiceText = event.results[0][0].transcript;
+
+        document.getElementById("text").value = voiceText;
+
+        sendMessage();
+
+    };
+
+}
+
+
+
+// Robot speaking
+
+function speak(text){
+
+    let speech = new SpeechSynthesisUtterance(text);
+
+    speech.lang = "en-US";
+
+    
+    let mouth = document.getElementById("mouth");
+
+    mouth.classList.add("talking");
+
+
+    speech.onend = function(){
+
+        mouth.classList.remove("talking");
+
+    };
+
+
+    window.speechSynthesis.speak(speech);
 
 }
