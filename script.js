@@ -319,3 +319,17 @@ document.addEventListener("touchmove", function(e){
     moveEyes(touch.clientX, touch.clientY);
 
 });
+function setEmotion(type){
+
+    let robot=document.querySelector(".robot");
+
+    robot.classList.remove(
+        "happy",
+        "thinking",
+        "sad",
+        "surprised"
+    );
+
+    robot.classList.add(type);
+
+}
