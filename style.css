@@ -52,6 +52,7 @@ h1 {
     background: white;
     border-radius: 50%;
     box-shadow: 0 0 15px white;
+    transition: transform 0.1s linear;
 }
 
 
