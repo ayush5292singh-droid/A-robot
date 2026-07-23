@@ -24,6 +24,7 @@ h1 {
 
 .robot {
     margin: 20px auto;
+    animation: floatRobot 3s ease-in-out infinite;
 }
 
 
@@ -148,5 +149,38 @@ from {
 to {
     height: 40px;
 }
+
+}
+@keyframes floatRobot {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+
+.head {
+
+    box-shadow: 0 0 30px #00d4ff,
+                0 0 60px #00d4ff;
+
+}
+
+
+.eyes span {
+
+    background: cyan;
+
+    box-shadow: 0 0 15px cyan,
+                0 0 30px cyan;
 
 }
