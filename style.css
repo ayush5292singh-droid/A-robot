@@ -185,3 +185,26 @@ to {
                 0 0 30px cyan;
 
 }
+/* Robot Emotions */
+
+.happy .eyes span{
+    background:#00ff66;
+    box-shadow:0 0 20px #00ff66;
+}
+
+.thinking .eyes span{
+    background:#ffd700;
+    box-shadow:0 0 20px #ffd700;
+}
+
+.sad .eyes span{
+    background:#00bfff;
+    box-shadow:0 0 20px #00bfff;
+}
+
+.surprised #mouth{
+    height:45px;
+    width:45px;
+    left:92px;
+    border-radius:50%;
+}
