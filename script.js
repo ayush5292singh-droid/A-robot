@@ -274,3 +274,48 @@ function speak(text){
     window.speechSynthesis.speak(speech);
 
 }
+function moveEyes(x, y) {
+
+    let eyes = [
+        document.getElementById("eye1"),
+        document.getElementById("eye2")
+    ];
+
+    eyes.forEach(function(eye) {
+
+        let rect = eye.getBoundingClientRect();
+
+        let eyeX = rect.left + rect.width / 2;
+        let eyeY = rect.top + rect.height / 2;
+
+        let angle = Math.atan2(y - eyeY, x - eyeX);
+
+        let moveX = Math.cos(angle) * 4;
+        let moveY = Math.sin(angle) * 4;
+
+        eye.style.transform =
+            `translate(${moveX}px, ${moveY}px)`;
+
+    });
+
+}
+
+
+// Mouse (desktop)
+
+document.addEventListener("mousemove", function(e){
+
+    moveEyes(e.clientX, e.clientY);
+
+});
+
+
+// Touch (iPad & phones)
+
+document.addEventListener("touchmove", function(e){
+
+    let touch = e.touches[0];
+
+    moveEyes(touch.clientX, touch.clientY);
+
+});
